@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--- 
+    基于Flex SDK 4.6基础上制作的关于spark/mx的自定义皮肤
+    作者姓名：NigelYang
+    项目地址：https://github.com/NigelYang/BootstrapStyle
+    下载地址：https://github.com/NigelYang/BootstrapStyle
+    新浪微博：http://weibo.com/ynypop
+    发布日期：2015年04月22日
+
+    Copyright (c) 2015 NigelYang
+
+	Permission is hereby granted, free of charge, to any person obtaining a copy of
+	this software and associated documentation files (the "Software"), to deal in
+	the Software without restriction, including without limitation the rights to
+	use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+	of the Software, and to permit persons to whom the Software is furnished to do
+	so, subject to the following conditions:
+	
+	The above copyright notice and this permission notice shall be included in all
+	copies or substantial portions of the Software.
+	
+	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+	SOFTWARE.
+	
+	Except as contained in this notice, the Software shall not be used in any commercial purposes.
+
+    @author NigelYang
+    @version 1.0
+-->
+<s:SparkSkin 
+	xmlns:fx="http://ns.adobe.com/mxml/2009" 
+	xmlns:s="library://ns.adobe.com/flex/spark" 
+	width="18" height="16"
+	alpha.disabled="0.5"
+>
+
+    <!-- host component -->
+    <fx:Metadata>
+	    <![CDATA[ 
+
+			/** 
+			 * @copy spark.skins.default.ButtonSkin#hostComponent
+			 */
+	    	[HostComponent("spark.components.Button")]
+
+	    ]]>
+    </fx:Metadata> 
+    
+    <!-- states -->    
+    <s:states>
+        <s:State name="up" />
+        <s:State name="over"/>
+        <s:State name="down" />
+        <s:State name="disabled" />
+    </s:states>
+
+	<!-- Transition -->
+	<s:transitions>
+		
+		<s:Transition fromState="up" toState="over" >
+			<s:AnimateColor duration="500" targets="{[ sc ]}" />
+		</s:Transition> 
+		
+		<s:Transition fromState="over" toState="up" >
+			<s:AnimateColor duration="500" targets="{[ sc ]}" />
+		</s:Transition> 
+		
+		<s:Transition fromState="over" toState="down" >
+			<s:AnimateColor duration="500" targets="{[ sc ]}" />
+		</s:Transition> 
+		
+		<s:Transition fromState="down" toState="up" >
+			<s:AnimateColor duration="500" targets="{[ sc ]}" />
+		</s:Transition> 
+		
+	</s:transitions>
+	
+	<!-- background --> 
+	<s:Rect 
+		left="0" right="0" top="0" bottom="0" 
+		bottomRightRadiusX="2"
+		>
+		
+		<s:filters>
+			<s:DropShadowFilter alpha="0" blurX="0" blurY="0" distance="0" strength="0" strength.down="0" />
+		</s:filters>
+		
+		<s:fill>
+			<s:SolidColor id="sc" color="0x0e90d2" color.over="0x0c79b1" color.down="0x0a628f"/>
+		</s:fill>
+		
+	</s:Rect>
+	
+	<!-- board --> 
+	<s:Rect 
+		left="0" right="0" top="0" bottom="0"
+		bottomRightRadiusX="2"
+		>
+		
+		<s:stroke>
+			<s:SolidColorStroke color="0x0e90d2" weight="1"/>
+		</s:stroke>
+		
+	</s:Rect>
+	
+    <!-- arrow -->
+    <!--- Defines the appearance of the down arrow. -->
+    <s:Path horizontalCenter="0" verticalCenter="0" id="arrow"
+          data="M 3.0 3.0 L 3.0 2.0 L 4.0 2.0 L 4.0 1.0 L 5.0 1.0 L 5.0 0.0 L 0.0 0.0 L 0.0 1.0 L 1.0 1.0 L 1.0 2.0 L 2.0 2.0 L 2.0 3.0 L 3.0 3.0">
+        <s:fill>
+		<!--- Defines the down arrow's fill. The default color is 0x000000. The default alpha is .8. -->
+        	<s:SolidColor id="arrowFill" color="0xFFFFFF" />
+        </s:fill>
+    </s:Path>            
+	
+</s:SparkSkin>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--- 
+    基于Flex SDK 4.6基础上制作的关于spark/mx的自定义皮肤
+    作者姓名：NigelYang
+    项目地址：https://github.com/NigelYang/BootstrapStyle
+    下载地址：https://github.com/NigelYang/BootstrapStyle
+    新浪微博：http://weibo.com/ynypop
+    发布日期：2015年04月22日
+
+    Copyright (c) 2015 NigelYang
+
+	Permission is hereby granted, free of charge, to any person obtaining a copy of
+	this software and associated documentation files (the "Software"), to deal in
+	the Software without restriction, including without limitation the rights to
+	use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+	of the Software, and to permit persons to whom the Software is furnished to do
+	so, subject to the following conditions:
+	
+	The above copyright notice and this permission notice shall be included in all
+	copies or substantial portions of the Software.
+	
+	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+	SOFTWARE.
+	
+	Except as contained in this notice, the Software shall not be used in any commercial purposes.
+
+    @author NigelYang
+    @version 1.0
+-->
+<s:SparkSkin 
+	xmlns:fx="http://ns.adobe.com/mxml/2009" 
+	xmlns:s="library://ns.adobe.com/flex/spark" 
+	xmlns:mx="library://ns.adobe.com/flex/halo"
+	alpha.disabledStates="0.5"
+>
+	
+	<!-- host component -->
+	<fx:Metadata>
+		<![CDATA[ 
+
+			/** 
+			 * @copy spark.skins.spark.ApplicationSkin#hostComponent
+			 */
+			[HostComponent("spark.components.RadioButton")]
+
+	    ]]>
+	</fx:Metadata>
+
+	<!-- states -->
+	<s:states>
+        <s:State name="up" />
+        <s:State name="over" stateGroups="overStates" />
+        <s:State name="down" stateGroups="downStates" />
+        <s:State name="disabled" stateGroups="disabledStates" />
+        <s:State name="upAndSelected" stateGroups="selectedStates" />
+        <s:State name="overAndSelected" stateGroups="overStates, selectedStates" />
+        <s:State name="downAndSelected" stateGroups="downStates, selectedStates" />
+        <s:State name="disabledAndSelected" stateGroups="disabledStates, selectedStates" />
+    </s:states>
+
+    <!-- Transition -->
+    <!-- Transition -->
+    <s:transitions>
+
+    	<s:Transition fromState="up" toState="over" >
+    		<s:AnimateColor duration="500" targets="{[ sc ]}" />
+    	</s:Transition> 
+
+    	<s:Transition fromState="over" toState="up" >
+    		<s:AnimateColor duration="500" targets="{[ sc ]}" />
+    	</s:Transition> 
+
+    	<s:Transition fromState="over" toState="down" >
+    		<s:AnimateColor duration="500" targets="{[ sc ]}" />
+    	</s:Transition> 
+
+    	<s:Transition fromState="down" toState="overAndSelected" >
+    		<s:AnimateColor duration="500" targets="{[ sc ]}" />
+    	</s:Transition> 
+
+    	<s:Transition fromState="upAndSelected" toState="overAndSelected" >
+    		<s:AnimateColor duration="500" targets="{[ sc ]}" />
+    	</s:Transition> 
+
+    	<s:Transition fromState="overAndSelected" toState="upAndSelected" >
+    		<s:AnimateColor duration="500" targets="{[ sc ]}" />
+    	</s:Transition> 
+
+    	<s:Transition fromState="overAndSelected" toState="downAndSelected" >
+    		<s:AnimateColor duration="500" targets="{[ sc ]}" />
+    	</s:Transition> 
+
+    	<s:Transition fromState="downAndSelected" toState="over" >
+    		<s:AnimateColor duration="500" targets="{[ sc ]}" />
+    	</s:Transition> 
+
+    </s:transitions>
+
+
+    <!-- background & board -->
+    <s:Ellipse width="15" height="15">
+
+		<s:filters>
+			<s:DropShadowFilter alpha="0.5" blurX="0" blurY="0" distance="1" strength="1" strength.down="0" strength.downAndSelected="0" />
+		</s:filters>
+
+		<s:fill>
+			<s:SolidColor id="sc" color="0xeeeeee" color.upAndSelected="0xdde5db" 
+						  color.over="0xf5f5f5" color.overAndSelected="0xC4D3C0"
+						  color.down="0xdcdcdc" color.downAndSelected="0xBDCEB9"/>
+		</s:fill>
+	</s:Ellipse>
+	
+	<!-- selectedStates -->
+	<s:Ellipse includeIn="selectedStates" x="5" y="5" width="6" height="6">
+
+		<s:fill>
+			<s:SolidColor color="0x0e90d2" color.over="0x0c79b1" />
+		</s:fill>
+
+	</s:Ellipse>
+	
+	<!-- text -->
+    <!---  @copy spark.components.supportClasses.ButtonBase#labelDisplay -->
+    <s:Label id="labelDisplay"
+             textAlign="start"
+             verticalAlign="middle"
+             maxDisplayedLines="1"
+             left="18" right="0" top="3" bottom="3" verticalCenter="2" 
+	/>
+	
+</s:SparkSkin>

@@ -1,0 +1,271 @@
+/*
+//------------------------------
+//  Namespaces
+//------------------------------
+*/
+@namespace s "library://ns.adobe.com/flex/spark";
+@namespace mx "library://ns.adobe.com/flex/mx";
+
+/*
+//------------------------------
+//  Global
+//	注：在皮肤中修改字体有错位现象
+//------------------------------
+*/
+global {
+	focusThickness : 0;
+}
+
+/*
+//==========================================================================================================================
+//
+// 							************************ Spark Skins ************************
+//
+//==========================================================================================================================
+*/
+
+/*
+//------------------------------
+// ** Spark Button
+//------------------------------
+*/
+s|Button {
+	skinClass : ClassReference("com.nigelyang.bootstrapstyle.spark.Button.ButtonSkin");
+}
+
+/* 
+//------------------------------ 
+//  **Spark CheckBox 
+//------------------------------ 
+*/ 
+s|CheckBox {
+	skinClass : ClassReference("com.nigelyang.bootstrapstyle.spark.CheckBox.CheckBoxSkin");
+}
+
+/* 
+//------------------------------ 
+//  **Spark TextInput 
+//------------------------------ 
+*/ 
+s|TextInput {
+	skinClass : ClassReference("com.nigelyang.bootstrapstyle.spark.TextInput.TextInputSkin");
+}
+
+
+/* 
+//------------------------------ 
+//  **Spark HScrollBar 
+//------------------------------ 
+*/ 
+s|HScrollBar {
+	skinClass : ClassReference("com.nigelyang.bootstrapstyle.spark.HScrollBar.HScrollBarSkin");
+}
+
+/* 
+//------------------------------ 
+//  **Spark VScrollBar 
+//------------------------------ 
+*/ 
+s|VScrollBar {
+	skinClass : ClassReference("com.nigelyang.bootstrapstyle.spark.VScrollBar.VScrollBarSkin");
+}
+
+/* 
+//------------------------------ 
+//  **Spark List 
+//------------------------------ 
+*/ 
+s|List {
+	skinClass : ClassReference("com.nigelyang.bootstrapstyle.spark.List.ListSkin");
+}
+
+/* 
+//------------------------------ 
+//  **Spark DropDownList 
+//------------------------------ 
+*/ 
+s|DropDownList {
+	skinClass : ClassReference("com.nigelyang.bootstrapstyle.spark.DropDownList.DropDownListSkin");
+}
+
+/* 
+//------------------------------ 
+//  **Spark BorderContainer 
+//------------------------------ 
+*/ 
+s|BorderContainer {
+	skinClass : ClassReference("com.nigelyang.bootstrapstyle.spark.BorderContainer.BorderContainerSkin");
+}
+
+/* 
+//------------------------------ 
+//  **Spark ComboBox 
+//------------------------------ 
+*/ 
+s|ComboBox {
+	skinClass : ClassReference("com.nigelyang.bootstrapstyle.spark.ComboBox.ComboBoxSkin");
+}
+
+/* 
+//------------------------------ 
+//  **Spark HSlider 
+//------------------------------ 
+*/ 
+s|HSlider {
+	skinClass : ClassReference("com.nigelyang.bootstrapstyle.spark.HSlider.HSliderSkin");
+}
+
+/* 
+//------------------------------ 
+//  **Spark VSlider 
+//------------------------------ 
+*/ 
+s|VSlider {
+	skinClass : ClassReference("com.nigelyang.bootstrapstyle.spark.VSlider.VSliderSkin");
+}
+
+/* 
+//------------------------------ 
+//  **Spark Panel 
+//------------------------------ 
+*/ 
+s|Panel {
+	skinClass : ClassReference("com.nigelyang.bootstrapstyle.spark.Panel.PanelSkin");
+}
+
+/* 
+//------------------------------ 
+//  **Spark TitleWindow 
+//------------------------------ 
+*/ 
+s|TitleWindow {
+	skinClass : ClassReference("com.nigelyang.bootstrapstyle.spark.TitleWindow.TitleWindowSkin");
+}
+
+/* 
+//------------------------------ 
+//  **Spark DataGrid 
+//------------------------------ 
+*/ 
+s|DataGrid {
+	skinClass : ClassReference("com.nigelyang.bootstrapstyle.spark.DataGrid.DataGridSkin");
+	symbolColor : #FFFFFF; 
+	borderColor : #CCCCCC;
+}
+
+/* 
+//------------------------------ 
+//  **Spark ToggleButton 
+//------------------------------ 
+*/ 
+s|ToggleButton {
+	skinClass : ClassReference("com.nigelyang.bootstrapstyle.spark.ToggleButton.ToggleButtonSkin");
+}
+
+/* 
+//------------------------------ 
+//  **Spark RadioButton 
+//------------------------------ 
+*/ 
+s|RadioButton {
+	skinClass : ClassReference("com.nigelyang.bootstrapstyle.spark.RadioButton.RadioButtonSkin");
+}
+
+/* 
+//------------------------------ 
+//  **Spark NumericStepper 
+//------------------------------ 
+*/ 
+s|NumericStepper {
+	skinClass : ClassReference("com.nigelyang.bootstrapstyle.spark.NumericStepper.NumericStepperSkin");
+}
+
+/* 
+//------------------------------ 
+//  **Spark Spinner 
+//------------------------------ 
+*/ 
+s|Spinner {
+	skinClass : ClassReference("com.nigelyang.bootstrapstyle.spark.Spinner.SpinnerSkin");
+}
+
+/* 
+//------------------------------ 
+//  **Spark TextArea 
+//------------------------------ 
+*/ 
+s|TextArea {
+	skinClass : ClassReference("com.nigelyang.bootstrapstyle.spark.TextArea.TextAreaSkin");
+}
+
+/* 
+//------------------------------ 
+//  **Spark ButtonBar 
+//------------------------------ 
+*/ 
+s|ButtonBar {
+	skinClass : ClassReference("com.nigelyang.bootstrapstyle.spark.ButtonBar.ButtonBarSkin");
+}
+
+/* 
+//------------------------------ 
+//  **Spark Scroller 
+//------------------------------ 
+*/ 
+s|Scroller {
+	skinClass : ClassReference("com.nigelyang.bootstrapstyle.spark.ScrollBar.ScrollerBarSkin");
+}
+
+/* 
+//------------------------------ 
+//  **Spark TabBar 
+//------------------------------ 
+*/ 
+s|TabBar {
+	skinClass : ClassReference("com.nigelyang.bootstrapstyle.spark.TabBar.TabBarSkin");
+}
+
+/*
+//==========================================================================================================================
+//
+// 							************************ Mx Skins ************************
+//
+//==========================================================================================================================
+*/
+
+/* 
+//------------------------------ 
+//  **mx DateChooser 
+//------------------------------ 
+*/ 
+mx|DateChooser {
+	nextMonthSkin: ClassReference( "com.nigelyang.bootstrapstyle.mx.DateChooser.DateChooserNextMonthSkin" );
+	prevMonthSkin: ClassReference( "com.nigelyang.bootstrapstyle.mx.DateChooser.DateChooserPrevMonthSkin" );
+	nextYearSkin: ClassReference( "com.nigelyang.bootstrapstyle.mx.DateChooser.DateChooserNextYearSkin" );
+	prevYearSkin: ClassReference( "com.nigelyang.bootstrapstyle.mx.DateChooser.DateChooserPrevYearSkin" );
+	todayIndicatorSkin: ClassReference( "com.nigelyang.bootstrapstyle.mx.DateChooser.DateChooserTodayIndicatorSkin" );
+	selectionIndicatorSkin: ClassReference( "com.nigelyang.bootstrapstyle.mx.DateChooser.DateChooserSelectionIndicatorSkin" );
+	rollOverIndicatorSkin: ClassReference( "com.nigelyang.bootstrapstyle.mx.DateChooser.DateChooserRollOverIndicatorSkin" );
+	contentBackgroundColor : #FFFFFF;
+	cornerRadius: 3;
+	borderColor: #CCCCCC;
+	headerColors: #0e90d2,#0e90d2;
+	headerStyleName:  DateChooserHeaderSkin;
+}
+
+.DateChooserHeaderSkin {
+	color: #FFFFFF;
+}
+
+/* 
+//------------------------------ 
+//  **mx LinkButton 
+//------------------------------ 
+*/ 
+mx|LinkButton {
+	skin: ClassReference("com.nigelyang.bootstrapstyle.mx.LinkButton.LinkButtonSkin");
+	text-decoration: underline;
+	color : #0e90d2;
+	textRollOverColor : #0e90d2;
+	textSelectedColor : #0e90d2;
+}

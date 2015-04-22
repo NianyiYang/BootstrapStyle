@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--- 
+    基于Flex SDK 4.6基础上制作的关于spark/mx的自定义皮肤
+    作者姓名：NigelYang
+    项目地址：https://github.com/NigelYang/BootstrapStyle
+    下载地址：https://github.com/NigelYang/BootstrapStyle
+    新浪微博：http://weibo.com/ynypop
+    发布日期：2015年04月22日
+
+    Copyright (c) 2015 NigelYang
+
+	Permission is hereby granted, free of charge, to any person obtaining a copy of
+	this software and associated documentation files (the "Software"), to deal in
+	the Software without restriction, including without limitation the rights to
+	use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+	of the Software, and to permit persons to whom the Software is furnished to do
+	so, subject to the following conditions:
+	
+	The above copyright notice and this permission notice shall be included in all
+	copies or substantial portions of the Software.
+	
+	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+	SOFTWARE.
+	
+	Except as contained in this notice, the Software shall not be used in any commercial purposes.
+
+    @author NigelYang
+    @version 1.0
+-->
+<s:SparkSkin 
+	xmlns:fx="http://ns.adobe.com/mxml/2009" 
+	xmlns:s="library://ns.adobe.com/flex/spark" 
+	minHeight="7" 
+	alpha.disabled="0.5"
+>
+
+    <!-- states -->
+	<s:states>
+		<s:State name="up"/>
+		<s:State name="over"/>
+		<s:State name="down"/>
+		<s:State name="disabled"/>
+	</s:states>
+
+    <!-- arrow -->
+    <s:Path 
+		id="arrow"
+		verticalCenter="0" horizontalCenter="0"
+        data="M 0 4 L 3 2 L 6 0 L 6 4 L 6 7 L 3 5 L 0 4 Z "
+	>
+
+        <s:fill>
+             <s:RadialGradient rotation="90" focalPointRatio="1">	
+
+			    <!--- The first part of the arrow's gradient fill. -->
+	            <s:GradientEntry id="arrowFill1" color="0xFFFFFF" alpha="1" />
+
+			    <!--- The second part of the arrow's gradient fill. -->
+	            <s:GradientEntry id="arrowFill2" color="0xFFFFFF" alpha="1" />
+
+        	</s:RadialGradient>
+        </s:fill>
+
+    </s:Path>
+
+</s:SparkSkin>

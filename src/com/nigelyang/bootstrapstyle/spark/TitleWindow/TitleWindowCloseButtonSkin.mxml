@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--- 
+    基于Flex SDK 4.6基础上制作的关于spark/mx的自定义皮肤
+    作者姓名：NigelYang
+    项目地址：https://github.com/NigelYang/BootstrapStyle
+    下载地址：https://github.com/NigelYang/BootstrapStyle
+    新浪微博：http://weibo.com/ynypop
+    发布日期：2015年04月22日
+
+    Copyright (c) 2015 NigelYang
+
+	Permission is hereby granted, free of charge, to any person obtaining a copy of
+	this software and associated documentation files (the "Software"), to deal in
+	the Software without restriction, including without limitation the rights to
+	use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+	of the Software, and to permit persons to whom the Software is furnished to do
+	so, subject to the following conditions:
+	
+	The above copyright notice and this permission notice shall be included in all
+	copies or substantial portions of the Software.
+	
+	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+	SOFTWARE.
+	
+	Except as contained in this notice, the Software shall not be used in any commercial purposes.
+
+    @author NigelYang
+    @version 1.0
+-->
+<s:SparkSkin 
+	xmlns:fx="http://ns.adobe.com/mxml/2009" 
+	xmlns:s="library://ns.adobe.com/flex/spark" 
+	minWidth="21" minHeight="21" 
+	alpha.disabled="0.5"
+>
+
+	<!-- host component -->
+	<fx:Metadata>
+		<![CDATA[ 
+
+			/** 
+			 * @copy spark.skins.default.ButtonSkin#hostComponent
+			 */
+			[HostComponent("spark.components.Button")]
+
+	    ]]>
+	</fx:Metadata>
+
+    <!-- states -->
+	<s:states>
+		<s:State name="up"/>
+		<s:State name="over"/>
+		<s:State name="down"/>
+		<s:State name="disabled"/>
+	</s:states>
+
+	<!-- Transition -->
+	<s:transitions>
+		
+		<s:Transition fromState="up" toState="over" >
+			<s:AnimateColor duration="500" targets="{[ sc ]}" />
+		</s:Transition> 
+		
+		<s:Transition fromState="over" toState="up" >
+			<s:AnimateColor duration="500" targets="{[ sc ]}" />
+		</s:Transition> 
+		
+		<s:Transition fromState="over" toState="down" >
+			<s:AnimateColor duration="500" targets="{[ sc ]}" />
+		</s:Transition> 
+		
+		<s:Transition fromState="down" toState="up" >
+			<s:AnimateColor duration="500" targets="{[ sc ]}" />
+		</s:Transition> 
+		
+	</s:transitions>
+
+	<!-- background --> 
+	<s:Ellipse 
+		left="0" right="0" top="0" bottom="0" 
+		>
+		
+		<s:filters>
+			<s:DropShadowFilter alpha="0" blurX="0" blurY="0" distance="0" strength="0" strength.down="0" />
+		</s:filters>
+		
+		<s:fill>
+			<s:SolidColor id="sc" color="0x0e90d2" color.over="0x0c79b1" color.down="0x0a628f"/>
+		</s:fill>
+		
+	</s:Ellipse>
+	
+	<!-- board --> 
+	<s:Ellipse 
+		left="0" right="0" top="0" bottom="0"
+		>
+		
+		<s:stroke>
+			<s:SolidColorStroke color="0x0e90d2" weight="1"/>
+		</s:stroke>
+		
+	</s:Ellipse>
+
+    <!--- Defines the appearance of the x in the close button. -->
+    <s:Group top="1" left="1" id="xSymbol">     
+        <s:Path blendMode="normal" alpha="1"
+                data="M 3 5 L 4 5 L 4 6 L 5 6 L 5 7 L 4 7 L 4 8 L 3 8 L 3 9 L 4 9 L 4 10 L 5 10 L 5 9 L 6 9 L 6 8 L 7 8 L 7 9 L 8 9 L 8 10 L 9 10 L 9 9 L 10 9 L 10 8 L 9 8 L 9 7 L 8 7 L 8 6 L 9 6 L 9 5 L 10 5 L 10 4 L 9 4 L 9 3 L 8 3 L 8 4 L 7 4 L 7 5 L 6 5 L 6 4 L 5 4 L 5 3 L 4 3 L 4 4 L 3 4 L 3 5 Z">
+            <s:fill>
+                <!--- @private -->
+                <s:SolidColor id="xFill1" color="0xFFFFFF" />
+            </s:fill>
+        </s:Path>
+        
+        <s:Path blendMode="normal" alpha="1"
+                data="M 3 3 L 4 3 L 4 4 L 3 4 L 3 3 M 3 9 L 4 9 L 4 10 L 3 10 L 3 9 M 9 3 L 10 3 L 10 4 L 9 4 L 9 3 M 9 9 L 10 9 L 10 10 L 9 10 L 9 9 Z">
+            <s:fill>
+                <!--- @private -->
+                <s:SolidColor id="xFill2" color="0xFFFFFF" />
+            </s:fill>
+        </s:Path>
+        
+        <s:Path blendMode="normal" alpha="0" 
+                data="M 3 5 L 3 6 L 4 6 L 4 7 L 5 7 L 5 6 L 4 6 L 4 5 L 3 5 M 8 6 L 8 7 L 9 7 L 9 6 L 10 6 L 10 5 L 9 5 L 9 6 L 8 6 M 3 10 L 3 11 L 5 11 5 10 L 6 10 L 6 9 L 7 9 L 7 10 L 8 10 L 8 11 L 10 11 L 10 10 L 8 10 L 8 9 L 7 9 L 7 8 L 6 8 L 6 9 L 5 9 L 5 10 L 3 10 Z">
+            <s:fill>
+                <s:SolidColor color="0xFFFFFF" />
+            </s:fill>
+        </s:Path>
+    </s:Group>
+	
+</s:SparkSkin>
