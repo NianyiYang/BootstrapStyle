@@ -1,7 +1,7 @@
 # BootstrapStyle
 Flex 4.6 Theme:BootstrapStyle
 
-http://github.com/NigelYang/BootstrapStyle/raw/master/screenshotxxx.png
+![image](http://github.com/NigelYang/BootstrapStyle/raw/master/screenshot.png)
 
 ### 使用方法(How to use)：  
 <pre>
