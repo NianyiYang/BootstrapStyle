@@ -28,6 +28,9 @@ import css file in your project,please make sure the path is right or not
 而且部分用得很多的mx组件也没有改写皮肤，今后如果有空的话可能会逐步完善。
 另外，由于Flex已经被Adobe无偿赠送给了Apache，发展不甚乐观，所以网上有关 Flex
 皮肤（尤其是以前版本的SDK）的资料不多，感谢那些无偿开放源码供大家参考的前辈们。 
+
+just spark components for now,mx components is still using default skins.
+may improve later or not. 
 </pre>
 
 ### 感谢(Thanks)：
