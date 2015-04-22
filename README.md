@@ -1,7 +1,7 @@
 # BootstrapStyle
 Flex 4.6 Theme:BootstrapStyle
 
-![image](http://github.com/NigelYang/BootstrapStyle/raw/master/screenshot.png)
+![](http://github.com/NigelYang/BootstrapStyle/raw/master/screenshot.png)
 
 ### 使用方法(How to use)：  
 <pre>
@@ -35,6 +35,7 @@ SilverGreen - Kenshin https://github.com/kenshin/silvergreen
 </pre>
 
 ### 版权和许可：
+<pre>
 Copyright 2015 NigelYang https://github.com/NigelYang
-
 Licensed under MIT or GPL Version 2 licenses
+<pre>
