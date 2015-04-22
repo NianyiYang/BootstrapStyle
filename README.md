@@ -1,6 +1,8 @@
 # BootstrapStyle
 Flex 4.6 Theme:BootstrapStyle
 
+http://github.com/NigelYang/BootstrapStyle/raw/master/screenshotxxx.png
+
 ### 使用方法(How to use)：  
 <pre>
 添加 BootstrapStyle.swc 到libs文件夹
