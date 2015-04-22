@@ -3,7 +3,7 @@ Flex 4.6 Theme:BootstrapStyle
 
 ### 预览(Preview)：
 <pre>
-![](https://github.com/NigelYang/BootstrapStyle/raw/master/screenshot.png)
+![image](https://github.com/NigelYang/BootstrapStyle/raw/master/screenshot.png)
 </pre>
 
 ### 使用方法(How to use)：  
