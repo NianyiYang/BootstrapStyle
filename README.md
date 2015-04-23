@@ -3,6 +3,7 @@ Flex 4.6 Theme:BootstrapStyle
 
 ### 预览(Preview)：
 
+图片出不来请点击图片
 ![image](https://github.com/NigelYang/BootstrapStyle/raw/master/screenshot.png)
 
 ### 使用方法(How to use)：  
@@ -29,7 +30,7 @@ import css file in your project,please make sure the path is right or not
 另外，由于Flex已经被Adobe无偿赠送给了Apache，发展不甚乐观，所以网上有关 Flex
 皮肤（尤其是以前版本的SDK）的资料不多，感谢那些无偿开放源码供大家参考的前辈们。 
 
-just spark components for now,mx components is still using default skins.
+just spark components for now,mx components are still using default skins.
 may improve later or not. 
 </pre>
 
